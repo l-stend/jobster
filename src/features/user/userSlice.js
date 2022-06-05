@@ -106,6 +106,7 @@ const userSlice = createSlice({
     [registerUser.pending]: (state) => {
       state.isLoading = true;
     },
+    // PAYLOAD è il contenuto ritornato nella funzione asincrona //=> return res.data --- guarda nelle funzioni prima del refactoring
     [registerUser.fulfilled]: (state, { payload }) => {
       const { user } = payload;
       state.isLoading = false;
@@ -120,6 +121,7 @@ const userSlice = createSlice({
     [loginUser.pending]: (state) => {
       state.isLoading = true;
     },
+    // PAYLOAD è il contenuto ritornato nella funzione asincrona //=> return res.data --- guarda nelle funzioni prima del refactoring
     [loginUser.fulfilled]: (state, { payload }) => {
       const { user } = payload;
       state.isLoading = false;
@@ -135,6 +137,7 @@ const userSlice = createSlice({
     [updateUser.pending]: (state) => {
       state.isLoading = true;
     },
+    // PAYLOAD è il contenuto ritornato nella funzione asincrona //=> return res.data --- guarda nelle funzioni prima del refactoring
     [updateUser.fulfilled]: (state, { payload }) => {
       const { user } = payload;
       state.isLoading = false;
